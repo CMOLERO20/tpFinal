@@ -4,6 +4,9 @@ const {cartView, purchase, purchaseView} =require("../controllers/cartController
 const {tokenNewPass} = require('../controllers/userController')
 
 const router = Router();
+router.get("/", async (req, res) => {
+  res.render("login");
+});
 
 router.get("/login", async (req, res) => {
   res.render("login");
