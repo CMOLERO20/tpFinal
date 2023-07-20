@@ -16,6 +16,7 @@ const passport = require("passport");
 const { initialize } = require("passport");
 const initializePassport = require("./config/passport.config");
 const { mongoDBconnection , configConnection } = require("./config/mongo.config");
+require('dotenv').config()
 
 const {setLogger, infoLogger} = require("./utils/logger");
 const swaggerJSDoc = require('swagger-jsdoc');
@@ -27,7 +28,7 @@ const specs = swaggerJSDoc(swaggerOpts);
 
 const app = express();
 
-const PORT = 8080;
+const port = process.env.PORT || 3000;
 
 app.use(methodOverride("_method"));
 app.use(express.json());
