@@ -1,0 +1,43 @@
+    <div class="row p-4">
+      <div class="col-4">
+        <h1>Carrito</h1>
+      </div>
+      <div class="col-4">
+        <h2>Total ${{carrito.amount}}</h2>
+      </div>
+      <div class="col-2">
+         
+      <a href="/api/carts/{{carrito._id}}/purchase"><button class="btn btn-outline-primary">Comprar</button></a>
+    
+      </div>
+     <div class="col-2">
+        <a href="/prod-disponibles"><button class="btn btn-outline-primary" >Seguir comprando</button></a>
+    </div>
+    </div>
+ <div class="row">
+   <div class = "">
+    <table  class="table">
+  <tr>
+    <th scope="col">Cantidad</th>
+    <th scope="col">Producto</th>
+    <th scope="col">Precio</th>
+  </tr>
+  {{#each carrito.products}}
+  <tr scope="row">
+    <td>{{this.quantity}} </td>
+    <td>{{this.product.title}} </td>
+    <td>{{this.product.price}} </td>
+    <td>
+      <form action="/api/carts/{{../carrito._id}}/product/{{this.product._id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+        </form>
+    </td>
+  </tr>
+    {{/each}}
+</table>
+  </div>  
+ 
+ </div>
+  
+</div>

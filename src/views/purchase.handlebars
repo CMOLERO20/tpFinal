@@ -1,0 +1,21 @@
+<div class="container p-5">
+<div class="card p-5">
+    <div class="card-body">
+        <h3 class="card-title">Ticket n° {{ticketCode}} </h3>
+        <h6 class="card-subtitle mb-2 text-muted">Total ${{amount}}</h6>
+     <br>
+     {{#each products}} 
+     <ul class="list-group list-group-flush">
+  <li class="list-group-item">{{this.title}} - {{this.quantity}} </li>
+ </ul>
+     {{/each}}  
+
+    </div>
+
+</div>
+<div class="col-4 p-3">
+         
+      <a href="/prod-disponibles"><button class="btn btn-outline-primary">Volver a productos</button></a>
+    
+      </div>
+</div>

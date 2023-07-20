@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row margin-auto p-4">
+  <div class="card">
+    <div class="card-body">
+      <h1>Registro</h1>
+
+  <div class="p-5" > 
+    <form action="/api/session/register" method="post">
+      <label class="form-label" for="nombre-cliente">Nombre del usuario</label><br />
+      <input
+        class="form-control"
+        type="text"
+        name="first_name"
+        id="first_name"
+        placeholder="introduzca su nombre"
+        required
+      /><br />
+      <label class="form-label" for="last_name">Apellido</label><br />
+      <input
+      class="form-control"
+        type="text"
+        name="last_name"
+        id="last_name"
+        placeholder="introduzca su apellido"
+        required
+      /><br />
+      <label class="form-label" for="email">Email</label><br />
+      <input
+      class="form-control"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="introduzca su correo electronico"
+        required
+      />
+      <br />
+      <label for="password" class="form-label">Contrasena</label><br />
+      <input
+      class="form-control"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="introduzca su contrasena"
+        required
+      />
+      <br />
+      <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </form>
+    </div>
+
+  </div>
+  </div>
+</div>
+</div>
