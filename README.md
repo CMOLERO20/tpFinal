@@ -2,8 +2,12 @@
 Api Ecommerce
 
 Comando de inicio Npm run start
+
 Inicio http://localhost:8080/login/
 
+Railway Deployment
+
+https://tpfinal-production-f0d7.up.railway.app/
 
 Usuarios de prueba
 
@@ -15,5 +19,5 @@ Premium - Vendedor
 Email: premium@gmail.com
 Password: 123456
 
-Docs http://localhost:8080/api/docs/
+Docs - /api/docs/
 
