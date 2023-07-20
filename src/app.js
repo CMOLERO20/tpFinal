@@ -28,7 +28,7 @@ const specs = swaggerJSDoc(swaggerOpts);
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(methodOverride("_method"));
 app.use(express.json());
@@ -79,7 +79,7 @@ app.use("/api/docs/", swaggerUI.serve, swaggerUI.setup(specs))
 
 
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   displayRoutes(app);
   console.log(`Listening on ${PORT}`);
 });
